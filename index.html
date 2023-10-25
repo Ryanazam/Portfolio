@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="fevicon.png">
     <title>Portfilo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
   </head>
 <body>
       <div id="wrapper">
@@ -19,7 +20,7 @@
                  <div class="logo-text">yan Azam</div>
                  </div>
 
-                 <div class="nav-item">
+                 <div class="nav-item" id="nav-active">
                     <div><a href="#projects" class="anchor">Projects</a>
                     <div class="horizontal"></div>
                     </div>
@@ -30,9 +31,13 @@
                     <div><a href="MY RESUME.pdf" class="anchor">My Resume</a>
                       <div class="horizontal"></div></div>
                  </div>
-           
-                </div>
+                
+                 <a href="#" class="nav-toggle nav-link" id="nav-click">
+                  <i class="fa-solid fa-bars"></i>
+                 </a>
 
+                </div>
+               
           
         <div class="hero-section">
             <div class="faded-text">Ryan Azam</div>
@@ -92,7 +97,7 @@
                           <img class="project-skill" src="photo/React.png" alt="" />
                       </div>
                       <h2 class="project-heading">Fitness & Factory</h2>
-                      <p class="project-subHeading">It is a Fitness and 
+                      <p class="project-subheading">It is a Fitness and 
                         factory website which provide you variety of Excercises and Most effective  </p>
                         <div class="btn-grp">
                         <a href="https://react-myfitness-app.netlify.app/">
@@ -127,7 +132,7 @@
                           <img class="project-skill" src="photo/NodeJs.svg" alt="" />
                         </div>
                         <h2 class="project-heading">Study Notion</h2>
-                        <p class="prject-subheading"> StudyNotion is a fully functional ed-tech platform that enables users to create, consume,
+                        <p class="project-subheading"> StudyNotion is a fully functional ed-tech platform that enables users to create, consume,
                           and rate educational content </p>
                         <div class="btn-group">
                           <a href="https://studynotion-frontend.vercel.app/">
@@ -157,7 +162,7 @@
                           <!-- <img class="project-skill" src="photo/Vercel.svg" alt="" /> -->
                         </div>
                         <h2 class="project-heading">Top Courses</h2>
-                        <p class="prject-subheading"> Top Courses is a web application developed using React, designed to provide users with a curated list of top-rated online
+                        <p class="project-subheading"> Top Courses is a web application developed using React, designed to provide users with a curated list of top-rated online
                           courses on various subjects</p>
                         <div class="btn-group">
                           <a href="https://main--incomparable-puffpuff-dc2fae.netlify.app/">
@@ -187,7 +192,7 @@
                           <img class="project-skill" src="photo/Vercel.svg" alt="" />
                         </div>
                         <h2 class="project-heading">Weather App</h2>
-                        <p class="prject-subheading">  Weather app provide Temperature ,Wind Speed ,Humidty ,Clouds for any given location and time.
+                        <p class="project-subheading">  Weather app provide Temperature ,Wind Speed ,Humidty ,Clouds for any given location and time.
                         </p>
                         <div class="btn-group">
                           <a href="https://comforting-pegasus-1403fe.netlify.app">
@@ -363,6 +368,15 @@ always Excited to learn new Skills and Technology.
       backSpeed: 80,
       backDelay: 1000,
     });
+    </script>
+    <script>
+      const Navactive = document.getElementById("nav-active");
+      const Navclick = document.getElementById("nav-click");
+
+      Navclick.addEventListener('click',()=>{
+
+        Navactive.classList.toggle('active')
+      })
     </script>
 </body>
 </html>
