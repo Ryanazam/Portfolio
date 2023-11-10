@@ -100,10 +100,10 @@
                       <p class="project-subheading">It is a Fitness and 
                         factory website which provide you variety of Excercises and Most effective  </p>
                         <div class="btn-grp">
-                        <a href="https://react-myfitness-app.netlify.app/">
+                        <a href="https://e-commerce-ryan.netlify.app/">
                         <button class="btn-pink btn-project">Explore Website</button>
                       </a>
-                        <a href="https://github.com/Ryanazam/Fitness-factory.git">
+                        <a href="https://github.com/Ryanazam/E-commerce-website.git">
                           <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                         </a>
                        <a href="https://react-myfitness-app.netlify.app/">
@@ -293,7 +293,7 @@ always Excited to learn new Skills and Technology.
 
                  <div class="contactus-form-container">
 
-                  <form action="https://formsubmit.co/jokermr1979@gmail.com"  method="POST" class="form">
+                  <form onsubmit="sendEmail(); reset();return false;">
                    <div class="formfield-container">
                     
                     <input type="text" class="formfield" placeholder="Enter your name" name="name" type="text" required>
@@ -369,6 +369,7 @@ always Excited to learn new Skills and Technology.
       backDelay: 1000,
     });
     </script>
+
     <script>
       const Navactive = document.getElementById("nav-active");
       const Navclick = document.getElementById("nav-click");
@@ -377,6 +378,23 @@ always Excited to learn new Skills and Technology.
 
         Navactive.classList.toggle('active')
       })
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "companyazam4@gmail.com",
+    Password : "AzamCompany@007",
+    To :'ryanazam0507@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+      }
     </script>
 </body>
 </html>
